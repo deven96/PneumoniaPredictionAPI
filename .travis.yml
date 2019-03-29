@@ -1,0 +1,24 @@
+language: python
+sudo: required
+python:
+- '3.6'
+branches:
+  only:
+  - master
+services:
+- docker
+before_install:
+- openssl aes-256-cbc -K $encrypted_02c61d280d4d_key -iv $encrypted_02c61d280d4d_iv
+  -in travis-pneumonia.json.enc -out travis-pneumonia.json -d
+install:
+- pip install -r requirements.txt
+script: docker build -f ./deploy/Dockerfile -t deven96/pneumonia-api .
+deploy:
+- provider: script
+  script: bash ./deploy/docker_push.sh
+- provider: gae
+  skip_cleanup: true
+  keyfile: travis-pneumonia.json
+  project: pneumonia-api
+notifications: 
+slack: bisoncorps:urrq42VfAo4zJP2r6lH2dU8Y

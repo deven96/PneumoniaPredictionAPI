@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Simple Pneumonia Classifier</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+    </head>
+    <body>
+        <h1>Using CURL to test the PneumoniaPredictionAPI</h1>
+        <p>The Pneumonia Prediction Network is built from transfer learning on MobileNet<br>
+        <p>Makes use of a simple binary crossentropy loss function to classify pneumonia images <br>
+        Below you can see the image we wish to classify, an xray image<br>
+        </p>
+
+        <img src="{{ url_for('static', filename='assets/xray-image.jpg') }}" alt="example photo of a beagle for classification">
+
+        <pre>
+        <code>
+        $ curl -X POST -F image=@xray-image.jpg 'http://pneumonia-api.appspot.com/predict'
+        
+        {
+        }
+        </code></pre>
+    </body>
+</html>
