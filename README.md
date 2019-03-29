@@ -49,11 +49,12 @@ Activate virtual environment. All project work should be done in virtualenvs and
 ```bash
     python flask_api/run_keras_server.py
 ```
+Configured to run on port 8008
 
-- With Gunicorn (port 5000)
+- With Gunicorn (port 8008)
 
 ```bash
-    gunicorn -b :5000 flask_api:app
+    gunicorn -b :8008 flask_api:app
 ```
 
 ## Deploy

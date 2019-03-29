@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -p 80:8000 deven96/pneumonia-api
+docker run  deven96/pneumonia-api

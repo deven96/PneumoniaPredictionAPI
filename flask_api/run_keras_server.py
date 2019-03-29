@@ -121,4 +121,4 @@ def predict():
 # then start the server
 if __name__ == "__main__":
     #locally run debug
-    app.run(debug=True, port='3333')
+    app.run(debug=True, port='8008')
