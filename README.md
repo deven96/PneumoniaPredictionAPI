@@ -58,7 +58,7 @@ Activate virtual environment. All project work should be done in virtualenvs and
 
 ## Deploy
 
-The `/predict` endpoint on `master` branch of the repo is linked to automatically deploy to be hosted on [Google Cloud](https://imageqapi.appspot.com/predict)
+The `/predict` endpoint on `master` branch of the repo is linked to automatically deploy to be hosted on [Google Cloud](https://pneumonia-api.appspot.com/predict)
 
 
 ## Documentation
@@ -67,6 +67,5 @@ Documentation including example use are available on [hosted version](https://pn
 
 ## Todo
 
-- Move keras prediction to API (separate django or flask app)
 - Setup GCP serving pipeline for API
 - Integrate weight updates from colaboratory
