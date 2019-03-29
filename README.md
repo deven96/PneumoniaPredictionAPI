@@ -1,6 +1,6 @@
 # Pnuemonia Prediction API
 
-Flask API for binary classification of xray images for pneumonia [PneumAI](https://github.com/deven96/PneumAI)
+Flask API for binary classification of xray images for web application [PneuNet](https://github.com/deven96/PneuNet)
 
 [![Build Status](https://travis-ci.org/deven96/PneumoniaPredictionAPI.svg?branch=master)](https://travis-ci.com/deven96/PneumoniaPredictionAPI)
 
